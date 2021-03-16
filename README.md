@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Typecheck
-        uses: computerjazz/typescript-error-reporter-action@v1.0.9
+        uses: gozala/typescript-error-reporter-action@v1.0.9
 ```
 
 `tsconfig.json`:
@@ -58,7 +58,7 @@ path to the repo itself:
 
 ```yaml
 - name: Typecheck
-  uses: computerjazz/typescript-error-reporter-action@v1.0.9
+  uses: gozala/typescript-error-reporter-action@v1.0.9
   with:
     project: packages/subpackage/tsconfig.json
 ```
@@ -68,7 +68,7 @@ If you're incrementally adopting typescript in a project, you may not want to fa
 
 ```yaml
 - name: Typecheck
-  uses: computerjazz/typescript-error-reporter-action@v1.0.9
+  uses: gozala/typescript-error-reporter-action@v1.0.9
   with:
     error_fail_threshold: 100
 ```
