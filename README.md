@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Typecheck
-        uses: gozala/typescript-error-reporter-action@v1.0.9
+        uses: gozala/typescript-error-reporter-action@v1.0.5
 ```
 
 `tsconfig.json`:
@@ -58,7 +58,7 @@ path to the repo itself:
 
 ```yaml
 - name: Typecheck
-  uses: gozala/typescript-error-reporter-action@v1.0.9
+  uses: gozala/typescript-error-reporter-action@v1.0.5
   with:
     project: packages/subpackage/tsconfig.json
 ```
