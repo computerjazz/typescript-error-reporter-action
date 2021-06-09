@@ -39,7 +39,8 @@ const resolveProjectPath = (projectPath:string) => {
       console.log("stats!!!", stats)
       return stats.isFile() ? configPath : null
     }
-  } catch {
+  } catch (err) {
+    console.log('caught!!!', err)
     return null
   }
 }
