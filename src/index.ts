@@ -10,9 +10,9 @@ type TS = typeof import('typescript')
 async function main() {
   try {
     const project = getInput('project') || 'tsconfig.json'
-
+    console.log('ROJECT!!', project)
     const projectPath = resolveProjectPath(path.resolve(process.cwd(), project))
-
+    console.log("PROJ PATH!!", projectPath)
     if (projectPath == null) {
       throw new Error(`No valid typescript project was not found at: ${projectPath}`)
     }
@@ -30,9 +30,11 @@ async function main() {
 const resolveProjectPath = (projectPath:string) => {
   try {
     if (fs.statSync(projectPath).isFile()) {
+      console.log("IS FILE!!", projectPath)
       return projectPath
     } else {
       const configPath = path.resolve(projectPath, "tsconfig.json")
+      console.log('CONFIG PATH!!!', configPath)
       return fs.statSync(configPath).isFile() ? configPath : null
     }
   } catch {
