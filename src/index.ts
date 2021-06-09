@@ -28,6 +28,7 @@ async function main() {
  * Attempts to resolve ts config file and returns either path to it or `null`.
  */
 const resolveProjectPath = (projectPath:string) => {
+  console.log("RESOLVE PROJ PATH!!!", projectPath)
   try {
     if (fs.statSync(projectPath).isFile()) {
       console.log("IS FILE!!", projectPath)
