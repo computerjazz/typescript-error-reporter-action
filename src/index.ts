@@ -38,7 +38,7 @@ const resolveProjectPath = (projectPath:string) => {
   } catch {
     return null
   }
-}
+} 
 
 const typecheck = (projectPath:string) => {
   const ts = loadTS(projectPath)
