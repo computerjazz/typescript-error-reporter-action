@@ -30,6 +30,7 @@ async function main() {
 const resolveProjectPath = (projectPath:string) => {
   console.log("RESOLVE PROJ PATH!!!", projectPath)
   console.log("PATH RESOLVE RESOLVE PROJ PATH!!!", path.resolve(projectPath))
+  console.log("PATH RESOLVE RESOLVE package.json PATH!!!", path.resolve(projectPath, "package.json"))
   try {
     if (fs.statSync(projectPath).isFile()) {
       console.log("IS FILE!!", projectPath)
