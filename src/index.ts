@@ -1,5 +1,5 @@
 import Module from 'module'
-import * as path from 'path'
+const path = require('path')
 import * as fs from 'fs'
 import { getInput, setFailed } from '@actions/core'
 import { reporter, uploader } from './reporter'
