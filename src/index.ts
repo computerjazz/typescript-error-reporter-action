@@ -34,7 +34,8 @@ const resolveProjectPath = (projectPath:string) => {
       console.log("IS FILE!!", projectPath)
       return projectPath
     } else {
-      const configPath = path.resolve(projectPath, "./tsconfig.json")
+      console.log('resolving!!!', projectPath, "tsconfig.json")
+      const configPath = path.resolve(projectPath, "tsconfig.json")
       console.log('CONFIG PATH!!!', configPath)
       const stats = fs.statSync(configPath)
       console.log("stats!!!", stats)
